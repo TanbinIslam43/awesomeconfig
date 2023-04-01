@@ -1,0 +1,8 @@
+#!/bin/sh
+
+start() {
+  [ -z "$(pidof -x $1)" ] && ${2:-$1} &
+}
+
+start nm-applet start volumeicon
+start pipewire-pulse  
